@@ -77,8 +77,8 @@ clear
     write_from_template etc_dhcp_dhclient6.conf /etc/dhcp/dhclient6.conf
 
     if [[ $DISTRO = "Debian" ]]; then
-        sysctl -w net.ipv6.conf.$INTERFACE.autoconf=0
-        write_from_template Debian/etc_sysctl.conf /etc/sysctl.conf
+#        sysctl -w net.ipv6.conf.$INTERFACE.autoconf=0
+#        write_from_template Debian/etc_sysctl.conf /etc/sysctl.conf
         ifdown $INTERFACE && ifup $INTERFACE
     elif [[ $DISTRO = "CentOS6" ]]; then
         chkconfig --add ipv6-dhclient
