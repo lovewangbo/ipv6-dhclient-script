@@ -1,0 +1,5 @@
+iface {{INTERFACE}} inet6 static
+        address {{BLOCK_ADDR}}
+        netmask {{BLOCK_SUBNET}}
+        gateway {{GATE_WAY}}
+        dns-nameservers 2001:4860:4860::8888 2001:4860:4860::8844
